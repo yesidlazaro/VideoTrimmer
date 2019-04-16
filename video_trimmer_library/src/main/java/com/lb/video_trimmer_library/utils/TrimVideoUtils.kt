@@ -54,14 +54,14 @@ object TrimVideoUtils {
         outputTrimmedVideoFile.parentFile.mkdirs()
         outputTrimmedVideoFile.delete()
         var succeeded = false
-        if (startMs <= 0L && endMs >= durationInMs) {
+       /* if (startMs <= 0L && endMs >= durationInMs) {
 //            Log.d("AppLog", "trimmed file is the entire video, so just copy it")
             context.contentResolver.openInputStream(inputVideoUri).use {
                 it?.copyTo(FileOutputStream(outputTrimmedVideoFile))
                 succeeded = it != null && outputTrimmedVideoFile.exists()
             }
 //            Log.d("AppLog", "succeeded copying?$succeeded")
-        }
+        }*/
         if (!succeeded) {
 //            Log.d("AppLog", "trying to trim using mp4parser...")
             try {
